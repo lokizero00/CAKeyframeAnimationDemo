@@ -37,12 +37,15 @@ class FirstViewController: UIViewController,CAAnimationDelegate {
         let p3=CGPoint(x: 15.0, y: 460.0)
         let p4=CGPoint(x: 320.0, y: 460.0)
         let p5=CGPoint(x: 15.0, y: 79.0)
+        
+        //赋值
 //        animation.values = [NSValue(cgPoint:p1),NSValue(cgPoint:p2),NSValue(cgPoint:p3),NSValue(cgPoint:p4),NSValue(cgPoint:p5)]
         animation.values = [p1,p2,p3,p4,p5]
+        //每个动作的时间百分比
         animation.keyTimes = [0.2,0.4,0.6,0.8,1.0]
         
         animation.delegate=self
-        animation.duration=3.0
+        animation.duration=5.0
         
         self.redView?.layer.add(animation, forKey: "View-fly")
     }
